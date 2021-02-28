@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.UUID;
 
 @Data
 @Builder
@@ -13,7 +14,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 public class MyMessage implements Serializable {
     static final long serialVersionUID = -6703826490277916847L;
-private int id;
+private UUID id;
 private String myMessage;
 
 }
