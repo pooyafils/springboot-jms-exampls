@@ -7,7 +7,6 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import java.util.UUID;
-
 @Component
 public class MyMessageSender {
     private final JmsTemplate jmsTemplate;
@@ -24,8 +23,8 @@ public class MyMessageSender {
                 .id(UUID.randomUUID())
                 .myMessage("Hello")
                 .build();
-    jmsTemplate.convertAndSend(JmsConfig.MY_QUEUE,myMessage);
-        System.out.println("Message send");
+        System.out.println("    Message send");
+        jmsTemplate.convertAndSend(JmsConfig.MY_QUEUE,myMessage);
 
     }
 
